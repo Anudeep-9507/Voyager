@@ -32,7 +32,7 @@ main().then(()=>{
 // change from MONGO_URL of local system to dbUrl of mongo cloud
 async function main() {
     try {
-        await mongoose.connect(dbUrl); o
+        await mongoose.connect(dbUrl);
         console.log("Connected to MongoDB Atlas");
     } catch (error) {
         console.error("Error connecting to MongoDB Atlas:", error);
