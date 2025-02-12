@@ -55,6 +55,7 @@ const store= MongoStore.create({
 store.on("error",()=>{
     console.log("ERROR in MONGO SESSION STORE",err);
 })
+
 // creating a session object 
 const sessionObject={
     store,
@@ -91,6 +92,7 @@ app.listen(8080,()=>{
 })
 
 app.use("/listings",listingRouter);
+
 // app.use("/listings/:id/reviews",reviews);
 app.use("/listings/:id/reviews", (req, res, next) => {
     req.listingId = req.params.id; // Pass `id` manually to the child router
