@@ -1,7 +1,12 @@
 <% layout("/layouts/boilerplate.ejs") %>
 
-<div class="row">
-    <div class="alert alert-danger col-6 offset-3" role="alert">
-      <%=message%>
+<div class="row mt-5">
+    <div class="col-6 offset-3">
+        <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading"><%= message %></h4>
+            <p>Something went wrong! Please try again or return to the home page.</p>
+            <hr>
+            <a href="/listings" class="btn btn-dark">Return to Home</a>
+        </div>
     </div>
 </div>

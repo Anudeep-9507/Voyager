@@ -49,5 +49,8 @@ router.get(
   wrapAsync(listingController.renderEditForm)
 );
 
+router.get("/", (req, res) => {
+    res.redirect("/listings");
+});
 
 module.exports = router;

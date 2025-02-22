@@ -100,10 +100,15 @@ app.use("/listings/:id/reviews", (req, res, next) => {
 }, reviewRouter);
 app.use("/",userRouter);
 
+// Add this near your other routes
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
+
 // custom ExpressError 
-app.all("*",(req,res,next)=>{
-    next(new ExpressError(404,"page not found"));
-})
+app.all("*", (req, res, next) => {
+    next(new ExpressError("Page Not Found", 404));
+});
 
 // middleware for error handling 
 app.use((err,req,res,next)=>{
