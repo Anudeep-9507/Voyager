@@ -80,7 +80,7 @@ background-color: grey;
 }
 .card-img-overlay:hover{
    opacity: 0.2;
-   background-color: white;
+   background-color: rgba(255, 255, 255, 0.634);
 }
 
 /* new page  and edit page*/
@@ -113,3 +113,389 @@ background-color: grey;
    margin-top:15px;
    margin-bottom:15px;
 }
+
+/* added design - later */
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+   /* Navbar adjustments */
+   .navbar {
+     height: auto;
+     padding: 0.5rem;
+   }
+ 
+   .search-inp {
+     padding: 0.5rem 1rem;
+     margin: 0.5rem 0;
+   }
+ 
+   /* Card grid adjustments */
+   .row-cols-md-2 {
+     --bs-rows-cols: 1 !important;
+   }
+ 
+   .listing-card {
+     margin: 0.5rem 0;
+   }
+ 
+   /* Show page adjustments */
+   .col-8.offset-3,
+   .col-6.offset-3 {
+     width: 100%;
+     margin-left: 0;
+   }
+ 
+   #map {
+     width: 100%;
+     height: 40vh;
+   }
+ 
+   /* Review cards */
+   .card.col-5 {
+     width: 100%;
+     margin: 0.5rem 0;
+   }
+ 
+   /* Footer adjustments */
+   .f-info {
+     height: auto;
+     padding: 1rem;
+   }
+ 
+   .f-info-socials,
+   .f-info-brand,
+   .f-info-links {
+     padding: 0.5rem 0;
+   }
+ }
+ 
+ @media screen and (max-width: 576px) {
+   /* Filters section */
+   .filters {
+     display: flex;
+     overflow-x: auto;
+     flex-wrap: nowrap; /* Prevent wrapping */
+     white-space: nowrap;
+     gap: 1rem;
+     padding: 0.5rem;
+     -webkit-overflow-scrolling: touch;
+     scrollbar-width: none; /* Firefox */
+     -ms-overflow-style: none; /* IE and Edge */
+   }
+ 
+   /* Hide scrollbar for Chrome, Safari and Opera */
+   .filters::-webkit-scrollbar {
+     display: none;
+   }
+ 
+   .filter {
+     flex: 0 0 auto; /* Don't allow shrinking */
+     margin-right: 0.2rem;
+     margin-top: 0.2rem;
+     opacity: 1;
+     min-width: fit-content;
+     padding: 0 0.5rem;
+   }
+ 
+   .filter i {
+     font-size: 1.2rem;
+   }
+ 
+   .filter p {
+     font-size: 0.8rem;
+     margin-top: 0.3rem;
+     margin-bottom: 0;
+   }
+ 
+   .tax-toggle {
+     position: sticky;
+     right: 0;
+     background: white;
+     padding-left: 1rem;
+     margin-left: auto;
+     border-left: 1px solid #eee;
+   }
+ 
+   /* Form adjustments */
+   .col-8.offset-2 {
+     width: 100%;
+     margin-left: 0;
+     padding: 0 1rem;
+   }
+ 
+   /* Flash messages */
+   .alert.col-3.offset-5 {
+     width: 90%;
+     margin: 1rem auto;
+   }
+ 
+   /* Show page buttons */
+   .btns {
+     flex-direction: column;
+     gap: 0.5rem;
+     align-items: stretch;
+   }
+ 
+   .btns .btn {
+     width: 100%;
+     margin: 0;
+   }
+ 
+   /* Card image heights */
+   .card-img-top {
+     height: 250px !important;
+   }
+ 
+   .show-img {
+     height: 25vh;
+   }
+ }
+ 
+ @media screen and (min-width: 769px) and (max-width: 1024px) {
+   .col-8.offset-3,
+   .col-6.offset-3 {
+     width: 80%;
+     margin-left: 10%;
+   }
+ 
+   #map {
+     width: 100%;
+   }
+ 
+   .row-cols-lg-3 {
+     --bs-rows-cols: 2 !important;
+   }
+ }
+ 
+ /* Additional utility classes */
+ .img-fluid {
+   max-width: 100%;
+   height: auto;
+ }
+ 
+ .w-100 {
+   width: 100% !important;
+ }
+ 
+ .overflow-hidden {
+   overflow: hidden;
+ }
+ 
+ /* Base styles for filters */
+ .filters {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+ }
+ 
+ .filter {
+   text-align: center;
+   margin-top: 2rem;
+   opacity: 0.7;
+ }
+ 
+ .filter:hover {
+   opacity: 1;
+   cursor: pointer;
+ }
+ 
+ /* Smooth transitions for all elements */
+ * {
+   transition: all 0.3s ease;
+ }
+ 
+ /* Listing card hover effects */
+ .listing-card {
+   transform: translateY(0);
+   transition: all 0.3s ease;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   padding-bottom: 0.5rem;
+   padding-left:0.3rem;
+ }
+ 
+ .listing-card:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .card-img-top {
+   transition: transform 0.5s ease;
+ }
+ 
+ .listing-card:hover .card-img-top {
+   transform: scale(1.03);
+ }
+ 
+ /* Filter animations */
+ .filter {
+   transition: transform 0.2s ease, opacity 0.2s ease;
+ }
+ 
+ .filter:hover {
+   transform: translateY(-2px);
+   opacity: 1;
+ }
+ 
+ .filter i {
+   transition: transform 0.3s ease;
+ }
+ 
+ .filter:hover i {
+   transform: scale(1.2);
+ }
+ 
+ /* Button animations */
+ .btn {
+   transition: all 0.3s ease;
+   position: relative;
+   overflow: hidden;
+ }
+ 
+ .btn:hover {
+   transform: translateY(-2px);
+ }
+ 
+ /* Search button styling */
+ .search-btn {
+   background-color: #ff385c !important;
+   color: white !important;
+   border: none !important;
+   padding: 0.5rem 1.5rem !important;
+   padding-right: 2.5rem !important;
+   border-radius: 25px !important;
+   display: flex;
+   align-items: center;
+   gap: 0.2rem;
+   transition: all 0.3s ease;
+ }
+ 
+ .search-btn i {
+   font-size: 1rem;
+ }
+ 
+ .search-btn:hover {
+   transition: all 0.2s ease;
+   background-color: #e31c5f !important;
+   box-shadow: 0 4px 12px rgba(255, 56, 92, 0.3);
+   transform: translateY(-2px);
+ }
+ 
+ /* Search input styling */
+ .search-inp {
+   border-radius: 25px !important;
+   padding: 0.5rem 1.5rem !important;
+   border: 1px solid #ced4da !important;
+ }
+ 
+ /* Navbar animations */
+ .navbar {
+   transition: all 0.3s ease;
+ }
+ 
+ .navbar-brand i {
+   transition: transform 0.3s ease;
+ }
+ 
+ .navbar-brand:hover i {
+   transform: rotate(180deg);
+ }
+ 
+ /* Form input animations */
+ .form-control {
+   transition: all 0.3s ease;
+   border: 2px solid transparent;
+ }
+ 
+ .form-control:focus {
+   border-color: #ff385c;
+   box-shadow: 0 0 0 0.2rem rgba(255, 56, 92, 0.25);
+   transform: translateY(-2px);
+ }
+ 
+ /* Footer hover effects */
+ .f-info-socials i {
+   transition: transform 0.3s ease;
+ }
+ 
+ .f-info-socials i:hover {
+   transform: scale(1.2);
+   color: #ff385c;
+ }
+ 
+ /* Show page animations */
+ .show-img {
+   transition: transform 0.5s ease;
+ }
+ 
+ .show-img:hover {
+   transform: scale(1.02);
+ }
+ 
+ /* Review card animations */
+ .review.card {
+   transition: all 0.3s ease;
+ }
+ 
+ .review.card:hover {
+   transform: translateY(-3px);
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+ }
+ 
+ /* Tax toggle animation */
+ .tax-toggle {
+   transition: all 0.3s ease;
+ }
+ 
+ .tax-toggle:hover {
+   background-color: #f8f9fa;
+ }
+ 
+ /* Loading animation for images */
+ .card-img-top {
+   opacity: 0;
+   animation: fadeIn 0.5s ease forwards;
+ }
+ 
+ @keyframes fadeIn {
+   from {
+     opacity: 0;
+     transform: translateY(10px);
+   }
+   to {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
+ 
+ /* Page transition animations */
+ .container {
+   animation: slideUp 0.5s ease;
+ }
+ 
+ @keyframes slideUp {
+   from {
+     opacity: 0;
+     transform: translateY(20px);
+   }
+   to {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
+ 
+ /* Flash message animations */
+ .alert {
+   animation: slideIn 0.5s ease;
+ }
+ 
+ @keyframes slideIn {
+   from {
+     opacity: 0;
+     transform: translateY(-20px);
+   }
+   to {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
